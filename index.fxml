@@ -1,0 +1,33 @@
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+
+
+<VBox fx:controller="gui.imagefilter.Controller"
+      xmlns:fx="http://javafx.com/fxml" minHeight="500.0" minWidth="500.0" style="-fx-background-color: #000000;">
+
+    <MenuBar fx:id="menuBar" layoutY="0.0">
+        <Menu fx:id="file" text="File">
+            <MenuItem fx:id="open" text="Open" onAction="#handleOpenImage"/>
+            <MenuItem fx:id="revert" disable="true" text="Revert" onAction="#handleRevert"/>
+            <MenuItem fx:id="revertAll" disable="true" text="Revert All" onAction="#handleRevertAll"/>
+            <MenuItem fx:id="close" disable="true" text="Close" onAction="#handleCloseImage"/>
+        </Menu>
+
+        <Menu fx:id="tools" text="Tools">
+            <MenuItem fx:id="edgeDetectorFilter" disable="true" text="Edge Detection" onAction="#handleFilter"/>
+            <MenuItem fx:id="sharpenFilter" disable="true" text="Sharpen" onAction="#handleFilter"/>
+            <MenuItem fx:id="blurFilter" disable="true" text="Blur" onAction="#handleFilter"/>
+            <MenuItem fx:id="embossFilter" disable="true" text="Emboss" onAction="#handleFilter"/>
+            <MenuItem fx:id="grayscaleFilter" disable="true" text="Grayscale" onAction="#handleFilter"/>
+        </Menu>
+    </MenuBar>
+
+    <VBox alignment="CENTER" VBox.vgrow="ALWAYS">
+        <ImageView fx:id="imgView" fitHeight="450.0" fitWidth="450.0"/>
+    </VBox>
+
+</VBox>
