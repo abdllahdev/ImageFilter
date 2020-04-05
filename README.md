@@ -1,5 +1,5 @@
 # ImageFilter
-<h2>Image Filter using Java and JavaFX</h2>
+<h2>Image Filter App using Java and JavaFX</h2>
 
 <h4>Filters in this App</h4>
 <ul>
